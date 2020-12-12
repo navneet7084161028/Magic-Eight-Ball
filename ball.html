@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Eight Ball</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <style>
+    		body
+    			{
+    			background-image: url(main.gif);
+    			height: auto;	
+    			}
+    		.image
+    			{
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			background-position: center;
+    			}
+    		#first
+    			{	
+    			background-image: url(astro.jpg);
+    			text-align: center;
+    			height:55vh;
+    			margin-left: 20%;
+    			margin-right:20%;
+    			border-radius: 55px;
+    			}
+    		#second
+    			{	
+    			background-image: url(ast.jpg);
+    			text-align: center;
+    			display: none;
+    			margin-left: 20%;
+    			margin-right:20%;
+    			height: 45vh;
+    			border-radius: 55px;
+    			}
+    		#third
+    			{	
+    			background-image: url(w1.jpg);
+    			text-align: center;
+    			display: none;
+    			width: 60%;
+    			margin: auto;
+    			height: 55vh;
+    			border-radius: 55px;
+    			}
+    		#fourth
+    			{	
+    			background-image: url(ast.jpeg);
+    			text-align: center;
+    			display: none;
+    			width: 60%;
+    			margin: auto;
+    			height: 50vh;
+    			border-radius: 55px;
+    			}
+    		h1:hover, h1:active
+    			{
+    				color: #FF1493;
+    			}
+    		.txt	
+    			{
+    			margin-top: 5%;
+    			color:#3CB371;
+    			font-size: 60px;
+    			font-weight: 700;
+    			}
+    	    .h2
+    			{	
+    			color: #FF69B4;
+    			font-size: 50px;
+    			 }
+
+    		input[type="text"]
+				{
+				width: 35%;
+				height: 30px;
+				padding : 10px;
+				font-size: 25px;
+				background-color:#bce8e6;
+				border-radius: 10px;
+				border: 2px solid teal;
+    			}
+
+    		input[type="button"]
+				{
+				width: 95px;
+    			height: 45px;
+    			background-color: teal;
+    			border: 2px solid white;
+   				border-radius: 10px;
+   				color: white;
+    			font-size: 20px;
+    			}
+    		.button
+    			{
+    			width: 95px;
+    			height: 45px;
+    			background-color:#87CEEB;
+    			border: 2px solid white;
+   				border-radius: 10px;
+   				color: white;
+    			font-size: 20px;
+    			}
+    		#selectBox
+    			{
+    			font-size: 25px;
+    			height: 50px;
+    			width: auto;
+    			background-color: #bce8e6;
+    			border-radius: 10px;
+    			border:2px solid black;
+    			}
+    		.img
+    		  {
+    			background-image: url(ball.jpg);
+    			background-repeat: no-repeat;
+    			background-size: cover;
+    			background-position: center;
+    			width: 160px;
+    			height: 100px;
+    			border-radius: 60px;
+    		}
+    </style>
+</head>
+	<body class="image">	
+			<div>
+
+				<div id="first" class="image">
+					<h1 class="txt"><marquee behavior="alternate"><b><u>Magic Eight Ball</u></b></marquee></h1>
+
+						<form name="form1" method="GET">
+							<label style="font-size: 50px; color: teal;"><b>Enter Your Name</b></label><br><br>
+							<input type="text" name="fname" id="disp"><br>
+							<br>
+							<input type="button" value="Click" onclick="myFunction()">
+						</form>
+				</div>
+
+					<div id="second" class="image">
+								<h1 id="demo" style="color:#87CEEB;font-size: 50px;"></h1>
+								<h2 id="demo1" style="color:#87CEEB; font-size: 40px;"></h2>
+								<button class="button" style="margin-right: 15px;" id="b1" onclick="show()">Yes</button>    
+								<button class="button" id="b2" onclick="show1()">NO</button>
+					</div>
+
+					<div id="third" class="image">
+						<h2 class="h2"><i>Welcome to the Game of Fortune</i></h2>
+						<p style="font-size: 40px; color:#DCDCDC;"><b>Please select any one Question</b></p>
+								<select id="selectBox">
+									<option>Please Select one of them</option>
+									<option value="1">~What are Goals in Life?</option>
+									<option value="2">~When I Got Engaged?</option>
+									<option value="3">~I am a Programmer or Not!</option>
+									<option value="4">~She is still love me?</option>
+									<option value="5">~Can you imagine how old i am?</option>
+									<option value="6">~Whom do I Admire most in the World?</option>
+									<option value="7">~Can I most Wealthiest person in my Area?</option>
+									<option value="8">~Should I form my company?</option>
+								</select><br>
+								<br>
+								<button class="img" onclick="changeFunc()"></button>
+					</div>
+
+					<div id="fourth" class="image">
+						<h3 class="h2" style="color: cyan;"><i>Wow! Your Fortune is going to show You...</i></h3>
+						<p id="print1" style="font-size: 40px; color:white; font-weight: bold;"></p>
+						<button class="button" id="quit" onclick="exit()" style="background-color: teal;">Quit</button>
+					</div>
+						
+			</div>
+			<h1 style="font-size: 40px; color: #DAA520; font-weight: bold;"><marquee><i>
+				Humpty Dumpty sat on the wall with a joint, drinking some magic eight-ball.</i></marquee></h1>
+
+	</body>
+<script type="text/javascript" src="ball1.js"></script>
+</html>
